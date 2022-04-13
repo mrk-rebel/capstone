@@ -1,2 +1,2 @@
-# capstone
-umsi mads capstone project - the look of hate on reddit
+# The Look of Hate on Reddit
+
