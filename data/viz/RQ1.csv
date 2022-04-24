@@ -1,0 +1,5 @@
+,gender,toxic_count,toxic_proportion,hate_count,hate_proportion,offensive_count,offensive_proportion,neither_count,neither_proportion,sample_count,sample_proportion
+0,both,31964,0.2807,10554,0.2487,21410,0.2997,21040,0.2269,3066,0.0663
+1,female,80084,0.7032,31280,0.737,48804,0.6831,62587,0.675,3571,0.0772
+2,male,423,0.0037,125,0.0029,298,0.0042,1527,0.0165,8756,0.1892
+3,none,1413,0.0124,483,0.0114,930,0.013,7568,0.0816,30881,0.6674
