@@ -5,6 +5,7 @@
 The goal of this project is to investigate details of hateful language on Reddit with an emphasis on gender. We wanted to know what does this language looks like--which terms are popular?--and whether it has a gender imbalance--is it more prevalent in comments that contain reference to female pronouns as opposed to comments that male pronouns?
 
 We started by deciding on a definition of hate. 
+
 --
 `Ruth`
 I think you would like to take this on and explain your research, correct?
