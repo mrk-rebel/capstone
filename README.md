@@ -9,7 +9,7 @@ Below are the steps we followed to complete the project
 
 --
 #### Hate definition research
-The initial portion of the work involved understanding academic definitions of hate. There is not a definitive answer of what constitutes hate speech or where the boundary between hate speech and offensive language is. Different people will have different judgments. From that research, we obtained the classifier used to label comments as either hateful, offensive or neither. Part of this research was to developed a list of terms found in hateful speech, which was largely from Davidson and colleagues (2017), but was ammended with terms from other research. 
+The initial portion of the work involved understanding academic definitions of hate. There is not a definitive agreement about what constitutes hate speech or where the boundary exists between hate speech and offensive language. Different people will have different judgments. From this research, we obtained the classifier used to label comments as either hateful, offensive or neither (Davidson, Warmsley, Macy, & Weber, 2017). Part of this research was to developed a list of terms found in hateful speech, which was also largely from Davidson and colleagues (2017), but was ammended with terms from other research. 
 The list `hate_terms` was then used to retrieve data from Reddit's API. 
 
 #### Data acquisition
@@ -33,15 +33,11 @@ Additional data processing:
 
 --
 #### Research Questions
-We developed a lengthy list of research questions, which grew as the project progressed. We did not tackle all of them for this first phase of the project. The full list of research questions is in the research questions. This document includes some project information as well as research questions, operationalized versions of the questions, some notes on statistical methods, and hypotheses.
+We developed numerous research questions -- and the number grew as the project progressed. We did not tackle all of them for this first phase of the project. The research questions are in ResearchQuestions.pdf. This document includes some project information as well as research questions, operationalized versions of the questions, some notes on statistical methods, and hypotheses.
 
-For this phase of the project we addressed research questions 1-9, 11, and 15 - 17.
+In this phase of the project we addressed research questions 1-9, 11, and 15 - 17.
 
-Each notebook is named using the research questions it analyze. If multiple questions are analyzed in one notebook, an underscore separates the questions. 
-
---
-#### Sample of analysis result
-`Ruth, please feel free to briefly discuss our RQs here.`
+Each notebook is named using the research question numbers. If multiple questions are analyzed in one notebook, an underscore separates the question numbers. For example, Q11_15.ipynb examines research questions 11 and 15. The notebooks include the research question, operationalized question, hypothesis, and a brief description of the results in a section above the coding for each question. Visualizations are included amid the coding.
 
 ## Reproducibility
 
