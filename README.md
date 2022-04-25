@@ -50,8 +50,8 @@ In this phase of the project we addressed research questions 1-9, 11, and 15 - 1
 
 ##### Hate speech
 7. Is toxic speech more prevalent on some subreddits than on others? (similar to 4)
-8. Is hate speech more controversial than offensive speech? Also examine controversiality and the various Detoxify measures.
-9. Is toxic speech more controversial than speech that is neither hateful or offensive?
+8. Is hate speech more controversial than offensive speech? Also examine controversiality and the various Detoxify measures. (similar to 5)
+9. Is toxic speech more controversial than speech that is neither hateful or offensive? (similar to 5)
 11. When do Redditors respond to hate speech?
 15. How often and when are toxic comments removed or deleted?
 16. Are comments or submissions more toxic?
