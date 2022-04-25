@@ -64,6 +64,11 @@ def find_gender(line):
     return gender
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ea79501ccf07af59d10c36b2a2acdd1e0f74bc6d
 from tqdm import tqdm
 import nltk
 from nltk.stem import WordNetLemmatizer

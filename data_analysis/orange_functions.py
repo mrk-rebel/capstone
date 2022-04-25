@@ -2,6 +2,7 @@
 
 import nltk
 from nltk.tokenize import word_tokenize
+<<<<<<< HEAD
 
 nltk.download('wordnet')
 nltk.download('omw-1.4')
@@ -22,6 +23,10 @@ import pandas as pd
 
 
 
+=======
+nltk.download('punkt')
+
+>>>>>>> ea79501ccf07af59d10c36b2a2acdd1e0f74bc6d
 male_words = {'amigo','ape','apes','bastard','bastards','bear',
                 'beast','beefcake','bloke','blokes','boy','boyfriend','boyfriends','boys','brah',
                 'bro','brother','brothers','bruh','brute','buck','bud','buddies','buddy',
@@ -55,6 +60,7 @@ female_words = {'actress','actresses','amiga','amigas','aunt','aunts','babe','ba
 
 #function works on tokenized --but not lemmatized! -- comments
 
+<<<<<<< HEAD
 CUSTOM_FILTERS = [strip_tags, 
                 strip_punctuation, 
                 strip_multiple_whitespaces, 
@@ -66,6 +72,12 @@ def find_gender(line):
     tokens = preprocess_string(line.lower(), CUSTOM_FILTERS)
     M_length = len(male_words.intersection(tokens))  
     F_length = len(female_words.intersection(tokens))
+=======
+def find_gender(comment_tokens):
+    M_length = len(male_words.intersection(word_tokenize(comment_tokens.casefold())))  
+    F_length = len(female_words.intersection(word_tokenize(comment_tokens.casefold())))
+    
+>>>>>>> ea79501ccf07af59d10c36b2a2acdd1e0f74bc6d
     if M_length > 0 and F_length == 0:
         gender = 'male'
     elif M_length == 0 and F_length > 0:
@@ -79,6 +91,27 @@ def find_gender(line):
 
 
 
+<<<<<<< HEAD
+=======
+
+from tqdm import tqdm
+import nltk
+from nltk.stem import WordNetLemmatizer
+from collections import Counter
+import pandas as pd
+
+from gensim.models.phrases import Phrases, ENGLISH_CONNECTOR_WORDS
+from gensim.parsing.preprocessing import (remove_stopwords, preprocess_string, strip_short,
+                                          strip_tags, strip_multiple_whitespaces, 
+                                          strip_non_alphanum, strip_punctuation,
+                                          remove_short_tokens, remove_stopword_tokens, 
+                                          STOPWORDS, strip_numeric
+                                         )  
+
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+>>>>>>> ea79501ccf07af59d10c36b2a2acdd1e0f74bc6d
 def get_k_freq(data):
 
     CUSTOM_FILTERS = [strip_tags, 
