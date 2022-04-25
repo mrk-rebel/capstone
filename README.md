@@ -5,15 +5,16 @@
 The goal of this project is to investigate details of hateful language on Reddit with an emphasis on gender. We wanted to know what does this language looks like--which terms are popular?--and whether it has a gender imbalance--is it more prevalent in comments that contain reference to female pronouns as opposed to comments that male pronouns?
 
 We started by deciding on a definition of hate. 
-
-`Ruth
+--
+`Ruth`
 I think you would like to take this on and explain your research, correct?
 No problem if you don't have time, just let me know. 
-Here, we're limited to discussing **our definition* of hate. The method can be discussed below. Similar to the paper you sent me, which uses Google's Perspective instead of detoxify, we could start this readme with our definition of "hate", or the proxies we're relying on.`
-
+Here, we're limited to discussing **our definition* of hate. The method can be discussed below. Similar to the paper you sent me, which uses Google's Perspective instead of detoxify, we could start this readme with our definition of "hate", or the proxies we're relying on.
+___
 ### Method
 Below are the steps we followed to complete the project
 
+--
 ##### Hate definition research
 `Ruth, would you like to work on this? let me know if you don't have time`
 
@@ -38,9 +39,11 @@ Additional data processing:
 * Detoxify classification
 * Filter out comments in foreign languages 
 
+--
 ##### Research Questions
 `Ruth please feel free to briefly discuss our RQs here.`
 
+--
 ##### Sample of analysis result
 `Ruth, please feel free to briefly discuss our RQs here.`
 
@@ -62,3 +65,21 @@ To reproduce this project from beginning to end, please follow the steps below.
 **Communicating results**
 
 6. Run `visualizations.ipynb`
+
+
+#### Statement of work:
+(names are in random order)
+
+* Research questions: Ruth, with input from Mel
+* Research (includes development of hate and gender terms to use in classification): Ruth, with input from Mel and Christian
+* Scraper research and exploration: Mel, Christian, and Ruth
+* Scraper coding and data acquisition: Mel
+* Data preparation and data governance: Mel
+* Classifiers: Christian, Ruth
+* Analyses: Christian, Ruth, with input from Mel (RQs 3, 6.1)
+* GitHub README: Mel, Christian, Ruth
+* Github management: Mel
+* Blog article: Ruth
+* Visualizations for publication: Mel
+* Publishing: Mel
+* Liaison with instructors: Ruth
