@@ -33,11 +33,11 @@ Additional data processing:
 
 --
 #### Research Questions
-We developed a lengthy list of research questions, which grew as the project progressed. We did not tackle all of them for this first phase of the project. The full list of research questions is in the research questions. This document includes some project information as well as research questions, operationalized versions of the questions, some notations of statistical methods, and hypotheses.
+We developed a lengthy list of research questions, which grew as the project progressed. We did not tackle all of them for this first phase of the project. The full list of research questions is in the research questions. This document includes some project information as well as research questions, operationalized versions of the questions, some notes on statistical methods, and hypotheses.
 
-For this phase of the project we addressed research questions
+For this phase of the project we addressed research questions 1-9, 11, and 15 - 17.
 
-Each notebook is named using the research questions it analyze. If multiple questions are analyzed in one notebook, an underscore 
+Each notebook is named using the research questions it analyze. If multiple questions are analyzed in one notebook, an underscore separates the questions. 
 
 --
 #### Sample of analysis result
