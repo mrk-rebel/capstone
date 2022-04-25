@@ -46,7 +46,7 @@ In this phase of the project we addressed research questions 1-9, 11, and 15 - 1
 4. Is gendered toxic speech more prevalent on some subreddits than on others? (similar to 7)
 5. Is toxic speech with female identifiers perceived differently than hate or offensive speech with male identifiers? (similar to 8 and 9) 
 6. How likely is it that gendered speech is related to violence?
-6.1. How often do the gender identifiers appear in the corpus?
+6_1. How often do the gender identifiers appear in the corpus?
 
 #### Hate speech
 7. Is toxic speech more prevalent on some subreddits than on others? (similar to 4)
