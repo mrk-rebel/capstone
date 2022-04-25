@@ -59,7 +59,7 @@ To reproduce this project from beginning to end, please follow the steps below.
 6. Run `visualizations.ipynb`
 
 ___
-#### Statement of work:
+#### Statement of work
 (names are in random order)
 
 * Research questions: Ruth, with input from Mel
