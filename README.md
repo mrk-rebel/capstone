@@ -39,16 +39,16 @@ Each notebook is named using the research question numbers. If multiple question
 
 In this phase of the project we addressed research questions 1-9, 11, and 15 - 17. The research questions (not operationalized version) are:
 
-#### Hate speech and gendered language
+##### Hate speech and gendered language
 1. How is toxic speech related to gendered speech?
 2. Do the Detoxify scores of comments differ based on the gender identified in the comments?
 3. How does language differ based on gendered speech?
 4. Is gendered toxic speech more prevalent on some subreddits than on others? (similar to 7)
 5. Is toxic speech with female identifiers perceived differently than hate or offensive speech with male identifiers? (similar to 8 and 9) 
-6. How likely is it that gendered speech is related to violence?
+6. How likely is it that gendered speech is related to violence?<br/>
 6_1. How often do the gender identifiers appear in the corpus?
 
-#### Hate speech
+##### Hate speech
 7. Is toxic speech more prevalent on some subreddits than on others? (similar to 4)
 8. Is hate speech more controversial than offensive speech? Also examine controversiality and the various Detoxify measures.
 9. Is toxic speech more controversial than speech that is neither hateful or offensive?
