@@ -35,9 +35,27 @@ Additional data processing:
 #### Research Questions
 We developed numerous research questions -- and the number grew as the project progressed. We did not tackle all of them for this first phase of the project. The research questions are in ResearchQuestions.pdf. This document includes some project information as well as research questions, operationalized versions of the questions, some notes on statistical methods, and hypotheses.
 
-In this phase of the project we addressed research questions 1-9, 11, and 15 - 17.
-
 Each notebook is named using the research question numbers. If multiple questions are analyzed in one notebook, an underscore separates the question numbers. For example, Q11_15.ipynb examines research questions 11 and 15. The notebooks include the research question, operationalized question, hypothesis, and a brief description of the results in a section above the coding for each question. Visualizations are included amid the coding.
+
+In this phase of the project we addressed research questions 1-9, 11, and 15 - 17. The research questions (not operationalized version) are:
+
+#### Hate speech and gendered language
+1. How is toxic speech related to gendered speech?
+2. Do the Detoxify scores of comments differ based on the gender identified in the comments?
+3. How does language differ based on gendered speech?
+4. Is gendered toxic speech more prevalent on some subreddits than on others? (similar to 7)
+5. Is toxic speech with female identifiers perceived differently than hate or offensive speech with male identifiers? (similar to 8 and 9) 
+6. How likely is it that gendered speech is related to violence?
+6.1. How often do the gender identifiers appear in the corpus?
+
+#### Hate speech
+7. Is toxic speech more prevalent on some subreddits than on others? (similar to 4)
+8. Is hate speech more controversial than offensive speech? Also examine controversiality and the various Detoxify measures.
+9. Is toxic speech more controversial than speech that is neither hateful or offensive?
+11. When do Redditors respond to hate speech?
+15. How often and when are toxic comments removed or deleted?
+16. Are comments or submissions more toxic?
+17. Do the Detoxify scores differ based on the hate/offensive/neither classifications of the comments?
 
 ## Reproducibility
 
