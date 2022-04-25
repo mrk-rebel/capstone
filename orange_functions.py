@@ -37,10 +37,21 @@ female_words = {'actress','actresses','amiga','amigas','aunt','aunts','babe','ba
 
 #function works on tokenized --but not lemmatized! -- comments
 
-def find_gender(comment_tokens):
-    M_length = len(male_words.intersection(word_tokenize(comment_tokens.casefold())))  
-    F_length = len(female_words.intersection(word_tokenize(comment_tokens.casefold())))
-    
+from gensim.parsing.preprocessing import (preprocess_string, strip_tags, strip_multiple_whitespaces, 
+                                          strip_non_alphanum, strip_punctuation, remove_stopword_tokens, 
+                                          STOPWORDS, strip_numeric
+                                         )
+CUSTOM_FILTERS = [strip_tags, 
+                strip_punctuation, 
+                strip_multiple_whitespaces, 
+                strip_non_alphanum, 
+                strip_numeric
+            ]
+
+def find_gender(line):
+    tokens = preprocess_string(line.lower(), CUSTOM_FILTERS)
+    M_length = len(male_words.intersection(tokens))  
+    F_length = len(female_words.intersection(tokens))
     if M_length > 0 and F_length == 0:
         gender = 'male'
     elif M_length == 0 and F_length > 0:
@@ -51,7 +62,6 @@ def find_gender(comment_tokens):
         gender = 'none'
         
     return gender
-
 
 
 from tqdm import tqdm
@@ -95,6 +105,8 @@ def get_k_freq(data):
 
     return Counter(terms)
 
+
+
 import nltk
 nltk.download('stopwords')
 import re
@@ -123,9 +135,108 @@ def filter_foreign_language_comments(series):
             english_comment_list.append(1)
                     
     return english_comment_list
-    
-    # dataframe['english'] = english_comment_list
-    # if filter_df:
-    #     return dataframe[dataframe.english > threshold].drop(['english'], axis=1)
-    # else:
-    #     return dataframe 
+
+
+
+
+f_df = pd.DataFrame({'identifier': list(female_words)})
+m_df = pd.DataFrame({'identifier': list(male_words)})
+f_df['gender'] = 'female'
+m_df['gender'] = 'male'
+gender_id_df = f_df.append(m_df, ignore_index=True)
+
+
+def get_tokens(data):
+    '''
+    tokenize all comments and remove stopwords
+    outputs a single list of tokens
+    '''
+    tokens = []
+    print('tokenizing...',end='\r')
+    for line in data.body.to_list():
+        pre = preprocess_string(line.lower(), CUSTOM_FILTERS)
+        tokens.extend(remove_stopword_tokens(pre, my_stopwords))
+    print(' ')
+    return [t for t in tokens if len(t)>1]
+
+
+def get_dict(data, k):
+    '''
+    creates dictionary with 
+    counter of terms for each gender
+    '''
+    top_tokens = defaultdict()
+    print('counting tokens...',end='\r')
+    top_tokens['all'] = Counter(get_tokens(data)).most_common(k)
+    top_tokens['female'] = Counter(get_tokens(data[data.gender=='female'])).most_common(k)
+    top_tokens['male'] = Counter(get_tokens(data[data.gender=='male'])).most_common(k)
+    print(' ')
+    return top_tokens
+
+
+def identifiers_dict(data, k):
+    '''
+    creates a dictionary with counter of 
+    gender identifiers for each gender
+    '''
+    global gender_id_df
+
+    pattern = re.compile('|'.join(gender_id_df.identifier.to_list()))
+
+    words = []
+    print('finding identifiers...',end='\r')
+    for txt in data.body.to_list():
+        words.extend(re.findall(pattern, txt.lower()))
+
+    top_tokens = defaultdict()
+    top_tokens['f_terms'] = Counter([w for w in words if w in female_words]).most_common(k)
+    top_tokens['m_terms'] = Counter([w for w in words if w in male_words]).most_common(k)
+
+    tokens=[]
+    for line in data.body.to_list():
+        pre = preprocess_string(line.lower(), CUSTOM_FILTERS)
+        tokens.extend(remove_stopword_tokens(pre, my_stopwords))
+
+    top_tokens['both_terms'] = Counter([w for w in tokens if w in gender_id_df.identifier.to_list()]).most_common(k)
+    print(' ')
+    return top_tokens
+
+
+def get_top_k_tokens(data, k, gender_id=False):
+    '''
+    creates df with k most frequent tokens 
+    for each gender and for all data
+    '''
+    if gender_id:
+        data_dict = identifiers_dict(data, k)
+    else:
+        data_dict = get_dict(data, k)
+
+    print('creating the dataframe...',end='\r')
+    for i,key in enumerate(data_dict.keys()):
+        cat_df = pd.DataFrame(data_dict[key])
+        cat_df.insert(0, 'gender', key)
+        if i==0:
+            df = cat_df.copy()
+        else:
+            df = df.append(cat_df, ignore_index=True)
+    df.columns = ['gender', 'token', 'freq']
+    df['rank'] = list(range(k))*3
+    print(' ')
+    return df
+
+
+def get_percentage(data):
+    '''
+    takes df with top_k gender identifiers (for all genders) 
+    and calculates percentage of frequency within each gender
+    '''
+    for i,g in enumerate(['f_terms', 'm_terms', 'both_terms']):
+        df = data[data['gender'] == g].copy()
+        df['percentage'] = 100 * df.freq/df.freq.sum()
+        if i==0:
+            perc_id = df.copy()
+        else:
+            perc_id = perc_id.append(df, ignore_index=True)
+        perc_id = perc_id.round(2)
+    return perc_id
