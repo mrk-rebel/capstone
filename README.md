@@ -9,8 +9,7 @@ We started by deciding on a definition of hate.
 --
 `Ruth`
 I think you would like to take this on and explain your research, correct?
-No problem if you don't have time, just let me know. 
-Here, we're limited to discussing **our definition* of hate. The method can be discussed below. Similar to the paper you sent me, which uses Google's Perspective instead of detoxify, we could start this readme with our definition of "hate", or the proxies we're relying on.
+Here, we're limited to discussing **our definition* of hate. 
 __
 ## Method
 Below are the steps we followed to complete the project
