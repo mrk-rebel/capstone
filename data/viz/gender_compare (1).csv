@@ -1,0 +1,9 @@
+gender,dataset,percentage
+female,primary,0.691
+both,primary,0.257
+none,primary,0.043
+male,primary,0.009
+female,reference,0.077
+both,reference,0.066
+none,reference,0.667
+male,reference,0.189
