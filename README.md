@@ -4,7 +4,7 @@
 ## Introduction
 The goal of this project is to investigate details of hateful language on Reddit with an emphasis on gender. We wanted to know: what does this language looks like? Which terms are popular? Whether it has a gender imbalance--is it more prevalent in comments with references to female identifiers as opposed to comments with male identifiers?
 ---
-(Publish article)[https://deepnote.com/@697publish/publishing-b22dad3f-c925-4cd0-bb81-e22d83bd774f]
+[Published article](https://deepnote.com/@697publish/publishing-b22dad3f-c925-4cd0-bb81-e22d83bd774f)
 ---
 ## Method
 Below are the steps we followed to complete the project
