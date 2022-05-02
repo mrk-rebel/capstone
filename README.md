@@ -1,15 +1,13 @@
 # The Look of Hate on Reddit
 
+Published article [here](https://deepnote.com/@697publish/publishing-b22dad3f-c925-4cd0-bb81-e22d83bd774f)
 ---
 ## Introduction
 The goal of this project is to investigate details of hateful language on Reddit with an emphasis on gender. We wanted to know: what does this language looks like? Which terms are popular? Whether it has a gender imbalance--is it more prevalent in comments with references to female identifiers as opposed to comments with male identifiers?
 ---
-Published article [here](https://deepnote.com/@697publish/publishing-b22dad3f-c925-4cd0-bb81-e22d83bd774f)
----
 ## Method
 Below are the steps we followed to complete the project
 
---
 #### Hate definition research
 The initial portion of the work involved understanding academic definitions of hate. There is not a definitive agreement about what constitutes hate speech or where the boundary exists between hate speech and offensive language. Different people will have different judgments. From this research, we obtained the classifier used to label comments as either hateful, offensive or neither (Davidson, Warmsley, Macy, & Weber, 2017). Part of this research was to developed a list of terms found in hateful speech, which was also largely from Davidson and colleagues (2017), but was ammended with terms from other research. 
 The list `hate_terms` was then used to retrieve data from Reddit's API. 
@@ -33,7 +31,7 @@ Additional data processing:
 * Detoxify classification
 * Filter out comments in foreign languages 
 
---
+---
 #### Research Questions
 We developed numerous research questions -- and the number grew as the project progressed. We did not tackle all of them for this first phase of the project. The research questions are in ResearchQuestions.pdf. This document includes some project information as well as research questions, operationalized versions of the questions, some notes on statistical methods, and hypotheses.
 
@@ -59,6 +57,7 @@ In this phase of the project we addressed research questions 1-9, 11, and 15 - 1
 16. Are comments or submissions more toxic?
 17. Do the Detoxify scores differ based on the hate/offensive/neither classifications of the comments?
 
+---
 ## Reproducibility
 
 This project is still in development so some things will be simplified and refined in the near future.<br/>
