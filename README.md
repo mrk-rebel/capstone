@@ -6,7 +6,7 @@
 ##### The goal of this project is to investigate details of hateful language on Reddit with an emphasis on gender. We wanted to know: what does this language looks like? Which terms are popular? Whether it has a gender imbalance--is it more prevalent in comments with references to female identifiers as opposed to comments with male identifiers?
 ---
 ## Method
-Below are the steps we followed to complete the project
+
 
 #### Hate definition research
 The initial portion of the work involved understanding academic definitions of hate. There is not a definitive agreement about what constitutes hate speech or where the boundary exists between hate speech and offensive language. Different people will have different judgments. From this research, we obtained the classifier used to label comments as either hateful, offensive or neither (Davidson, Warmsley, Macy, & Weber, 2017). Part of this research was to developed a list of terms found in hateful speech, which was also largely from Davidson and colleagues (2017), but was ammended with terms from other research. 
